@@ -1,0 +1,50 @@
+{% extends 'PensionAnimal/base.html' %}
+
+{% block content %}
+
+
+    <div class="card text-center">
+  <div class="card-header">
+    Cordonnées
+      <a href="{% url 'update_personne' personne.id %}" class="close">
+          </i> <i class="fas fa-edit"></i>
+      </a>
+  </div>
+  <div class="card-body">
+
+      <div class="row">
+          <div class="col">
+               <strong>id</strong> : {{ personne.id }} <br>
+              <strong>Nom</strong> : {{ personne.nom }} <br>
+          </div>
+          <div class="col">
+              <strong>prenom</strong> : {{ personne.prenom }} <br>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col">
+              <strong>Adresse mail</strong> : {{ personne.email }} <br>
+          </div>
+          <div class="col">
+              <strong>Téléphone</strong> : {{ personne.telephone }} <br>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col">
+              <strong>Adresse </strong> : {{ personne.get_adresse_complete }} <br>
+          </div>
+      </div>
+
+       <div class="row">
+          <div class="col">
+              <strong>Commentaire </strong> : {{ personne.commentaire }} <br>
+          </div>
+      </div>
+
+
+  </div>
+</div>
+
+{% endblock content %}
